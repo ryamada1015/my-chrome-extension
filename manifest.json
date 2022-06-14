@@ -1,0 +1,19 @@
+{
+    "name": "Name unknown",
+    "description": "Last minute confirmation before purchasing online",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["declarativeContent"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.amazon.com/*"],
+            "js": ["contentScript.js"]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+  }
